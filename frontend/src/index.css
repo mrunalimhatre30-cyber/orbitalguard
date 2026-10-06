@@ -1,0 +1,30 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root { margin: 0; padding: 0; width: 100%; min-height: 100vh; }
+
+body {
+  background: #060b1a;
+  color: #e6ecfb;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+/* Fixed space background: stays still while the page scrolls */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(1.5px 1.5px at 20% 30%, #fff, transparent),
+    radial-gradient(1px 1px at 70% 20%, #cfe3ff, transparent),
+    radial-gradient(1.5px 1.5px at 40% 80%, #fff, transparent),
+    radial-gradient(1px 1px at 85% 65%, #cfe3ff, transparent),
+    radial-gradient(1px 1px at 10% 70%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 60% 50%, #9cb8ff, transparent),
+    radial-gradient(ellipse at 50% 0%, #14204d 0%, #0b1026 55%, #05070f 100%);
+  background-size: 300px 300px, 400px 400px, 350px 350px, 450px 450px,
+                   500px 500px, 380px 380px, 100% 100%;
+}
+
+#root { max-width: none; text-align: left; }
